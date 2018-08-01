@@ -8,4 +8,8 @@ bot.on("ready", async () => {
   bot.user.setGame("on Warzone");
 });
 
+bot.on("message", async message => {
+  if(message.author.bot) return;
+});
+
 bot.login(botconfig.token);
